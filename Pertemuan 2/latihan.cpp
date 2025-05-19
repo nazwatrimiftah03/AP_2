@@ -1,20 +1,18 @@
 #include <iostream>
 using namespace std;
 
-const double PI = 3.141592653589793;
+int main()
+    {
+        // Program untuk menentukan volume dan luas sebuah bola
+        float luas, volume, jari; //deklarasi variabel luas,volume,jari-jari
+        const float phi = 3.14; // deklrasi konstanta 
 
-int main() {
-    float luas, volume, r;
+        cout << "Input jari-jari : ";
+        cin >> jari; //meminta pengguna input nilai jari-jari dan meyimpan di variabel
 
-    cout << "Masukkan jari-jari bola: ";
-    cin >> r;
+        volume = ((float)4/3) * (phi) * (jari*jari*jari);//rumus hitung voulume bola
+        luas = 4 * phi * jari * jari;//rumus hitung l.permukaan bola
 
-    luas = 4 * PI * r * r;
-    cout << "Luas permukaan bola = " << luas << endl;
-
-
-    volume = (4.0 / 3.0) * PI * r * r * r;
-    cout << "Volume bola = " << volume << endl;
-
-    return 0;
-}
+        cout << "Volume : " << volume << endl; // menampilkan hasil hitung vol.
+        cout << "luas : " << luas << endl; // menampilkan hasil hitung luas
+    }
