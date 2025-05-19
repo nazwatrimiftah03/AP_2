@@ -1,18 +1,18 @@
-#include <iostream>
+#include <iostream> // header input c++
 using namespace std;
 
 int main  () {
 
-    float  luas, p, l;
+    float  luas, p, l; //deklarasi variabel luas,panjang,lebar
 
     cout << "Masukkan panjang : ";
-    cin >> p;
+    cin >> p; // input pengguna memasukkan dan menyimpan di variabel'p'
     
     cout << "Masukkan lebar : ";
-    cin >> l;
+    cin >> l;// input pengguna memasukkan dan menyimpan di variabel'l'
 
-    Luas = p * l;
-    cout << "luas = " << Luas << endl;
+    Luas = p * l; // rumus luas p.panjang
+    cout << "luas = " << Luas << endl;//menampilkan hasil
 
     return 0;
 }
