@@ -1,11 +1,11 @@
 #include <stdio.h> // header untuk C
-#include <conio.h>
+#include <conio.h> // header untuk fungsi getch()
 
 int main() {
-    char nama[50];
-    int nim;
-    char kom[2];
-    float ip;
+    char nama[50]; //deklarasi array karakter untuk nama maks.49 karakter
+    int nim; //deklarasi variabel integer menyimpan nim
+    char kom[2]; // deklarasi array menyimpan kom
+    float ip; // deklarasi varibel float menyimpan ip
 
     printf("Hello World\n"); // fungsi keluaran pada C
 
@@ -27,12 +27,12 @@ int main() {
     printf("Nama : ");
     puts(nama); // put string, digunakan untuk string dalam bentuk array char
 
-    printf("NIM : %d\n", nim);
+    printf("NIM : %d\n", nim); // menampilkan nim
 
     printf("KOM : ");
-    puts(kom); 
-    printf("IP : %f\n", ip);
+    puts(kom); //menampilkan kom
+    printf("IP : %f\n", ip); //menampilkan ip
 
     printf("press any button to continue...");
-    getch(); 
+    getch(); //menunggu input karakter sebelum console
 }
