@@ -1,10 +1,10 @@
-#include <iostream>
+#include <iostream> //hedarer untuk c++
 using namespace std;
 
-string namaGlobal = "Ilmu";
+string namaGlobal = "Ilmu"; //varibael global
 
-void namaVariabel (){
-    string namaLokal = "Komputer";
+void namaVariabel (){ //fungsi nama varibael
+    string namaLokal = "Komputer"; //variabel lokal untuk fungsi 'namaVariabel'
 
     // coba akses
     cout << namaLokal << endl;
@@ -14,7 +14,7 @@ void namaVariabel (){
 }
 
 int main () {
-    namaVariabel();
+    namaVariabel(); // Memanggil fungsi 'namaVariabel'
 
      // coba akses
     cout << namaGlobal << endl;
