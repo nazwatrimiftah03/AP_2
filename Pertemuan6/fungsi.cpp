@@ -1,4 +1,4 @@
-#include <iostream>
+#include <iostream> //header untuk c++
 #include <cstdlib> // untuk system("cls")
 using namespace std;
 
@@ -9,29 +9,29 @@ void tampilkanpesan() {
 
 // Fungsi dengan nilai balikan
 int tambah(int a, int b) {
-    return a + b;
+    return a + b; //mengembalikan hasil penjumlahan a dan b
 }
 
 // Fungsi overload
-int kali(int a, int b) {
+int kali(int a, int b) { //untuk perkalian bil.bulat
     return a * b;
 }
 
 double kali(double a, double b) {
-    return a * b;
+    return a * b; //perkalian bilanga desimal
 }
 
 // Fungsi rekursif
 int faktorial(int n) {
     if (n == 0 || n == 1) {
-        return 1;
+        return 1; //kondisi dasar
     } else {
-        return n * faktorial(n - 1);
+        return n * faktorial(n - 1);//memanggil dirinya sendiri dengen'n-1'
     }
 }
 
 int main() {
-    system("cls");
+    system("cls");//membersihkan layar
 
     // Menggunakan fungsi tanpa nilai balikan
     tampilkanpesan();
@@ -39,12 +39,12 @@ int main() {
     int x = 5, y = 3;
 
     // Menggunakan fungsi dengan nilai balikan
-    int hasiltambah = tambah(x, y);
+    int hasiltambah = tambah(x, y); //menyimpan hasil penjumlahan
     cout << "Hasil penjumlahan: " << hasiltambah << endl;
 
     // Menggunakan fungsi overload
-    int hasilkaliint = kali(x, y);
-    double hasilkalidouble = kali(5.5, 2.0);
+    int hasilkaliint = kali(x, y); //memanggil kali untuk int
+    double hasilkalidouble = kali(5.5, 2.0); //memanggil kali untuk double/desimal
 
     cout << "Hasil perkalian (int): " << hasilkaliint << endl;
     cout << "Hasil perkalian (double): " << hasilkalidouble << endl;
