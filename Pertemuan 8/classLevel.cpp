@@ -1,58 +1,52 @@
-#include <iostream>
+#include <iostream> // Header untuk c++
 using namespace std;
 
-// Struktuer Class
-// class nama_class{
-//     private:
-//         anggota_private;
-//     protected:
-//         anggota_protected;
-//     public:
-//         anggota_public;
-// };
-
-class contoh_akses {
+class ContohAkses {
     private:
-        int privateVar;
+        int privateVar; //hanya akses di dalam kelas ini
+    
     protected:
-        int protectedVar;
-    public:
-        int publicVar;
+        int protectedVar; //bisa di akses di dalam dan kelas turunannya
 
-// Constructor
-    contoh_akses(){
+    public:
+        int publicVar; //bisa di akses di mana saja
+
+    // Constructor
+    ContohAkses() {
         privateVar = 1;
         protectedVar = 2;
         publicVar = 3;
     }
-
-    void tampilkanSemua(){
-        cout << "Akses dari dalam data : " << endl;
+//fungsi untuk menampilkan semua variabel
+    void tampilkanSemua() {
+        cout << "Akses dari dalam class : " << endl;
         cout << privateVar << endl;
         cout << protectedVar << endl;
         cout << publicVar << endl;
     }
 };
-
-// kelas turunan 
-class turunan : public contoh_akses { // class turunan bisa mewarisi semua atribut milik class contoh_akses
+//kelas turunan dari contohakses
+class Turunan : public ContohAkses {
     public:
-void aksesProtected(){
-            cout << "Akses publicVar : " << publicVar << endl;
-            cout << "Akses protectedVar : " << protectedVar << endl;
-            // cout << "Akses privateVar : " << privateVar << endl; Akan error, karena hanya bisa diakses oleh class parent
-        }
+//fungsi untuk mengakses variabel dari kelas induk
+    void aksesProtected() {
+        cout << protectedVar << endl; // BISA: Akses protected dari turunan
+        cout << publicVar << endl; // BISA: Akses public dari turunan
+        // cout << privateVar << endl; // error : Tidak bisa akses private dari turunan
+    }
 };
 
-int main(){
-    contoh_akses objek;
-    objek.tampilkanSemua();
+int main () {
+    ContohAkses obj; // Buat objek dari ContohAkses
+    obj.tampilkanSemua(); // Tampilkan semua variabel dari dalam objek
 
     cout << "\nAkses dari luar class : " << endl;
-    // cout << objek.privateVar << endl; // Akan error
-    // cout << objek.protectedVar << endl; // Akan error
-    cout << objek.publicVar << endl; 
+    // cout << obj.privateVar << endl;  // error: tidak bisa akses private dari luar
+    // cout << obj.protectedVar << endl; // error : tidak bisa akses protected dari luar
+    cout << obj.publicVar << endl;
 
-    turunan tur;
-    tur.aksesProtected();
+    cout <<"\nAkses dari kelas Turunan " << endl;
+    Turunan tur; // Buat objek dari Turunan
+    tur.aksesProtected(); // Tampilkan variabel yang bisa diakses turunan
+}
 }
