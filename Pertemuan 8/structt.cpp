@@ -1,53 +1,61 @@
-#include <iostream>
-#include <vector>
-
+#include<iostream> //header untuk cpp
+#include<string> //header untuk tipe data string
+#include<vector> //hedaer untuk penggunaan vector
 using namespace std;
 
-
-struct alamat {
-    string jalan;
-    string kota;
-    int kodepos;
+// Definisi struct Alamat untuk menyimpan informasi alamat
+struct Alamat {
+    string jalan; //nama jalan
+    string kota; //nama kota
+    int kodePos; // kode pos
 };
 
-struct Mahasiswa{
+// Definisi struct Mahasiswa
+struct Mahasiswa {
     string nama;
     int umur;
     float ipk;
-    alamat alamat_mahasiswa;
+    Alamat alamat; // nested struct
 };
 
-int main(){
-    Mahasiswa mhs1;
+int main () {
+    system("CLS"); // Membersihkan layar
+    // Mahasiswa mhs1; // Membuat objek mhs1
 
-    mhs1.nama = "Nazwa";
-    mhs1.umur = 19;
-    mhs1.ipk = 4.00;
+    // mhs1.alamat.jalan = "Jalan Jamin Ginting";
+    // mhs1.alamat.kota = "Medan";
+    // mhs1.alamat.kodePos = 20155;
 
-    mhs1.alamat_mahasiswa.jalan = "Jl.Utama";
-    mhs1.alamat_mahasiswa.kota = "Medan";
-    mhs1.alamat_mahasiswa.kodepos = 20177;
-
-cout << "Alamat : " << mhs1.alamat_mahasiswa.jalan << " Kota " << mhs1.alamat_mahasiswa.kota << " Kodepos " << mhs1.alamat_mahasiswa.kodepos << endl;
-
-    vector<Mahasiswa> mahasiswa;
-    int n;
-    cout << "Masukkan banyak mahasiswa : ";cin >> n;
+    // cout << "Alamat : " << mhs1.alamat.jalan << " " << mhs1.alamat.kota << " " << mhs1.alamat.kodePos << endl;
     
-    for(int i = 0;i < n;i++){
-        cout << "Mahasiswa ke-" << i+1 << endl;
-        cin.get();
-        cout << "Masukkan Nama : ";getline(cin, mhs1.nama);
-        cout << "Masukkan Umur : ";cin >> mhs1.umur;
-        cout << "Masukkan ipk : ";cin >> mhs1.ipk;
+// Menggunakan vector untuk menyimpan banyak objek Mahasiswa
+    vector<Mahasiswa> mahasiswa; // Deklarasi vector yang akan menyimpan objek Mahasiswa
+    int n; // Variabel untuk menyimpan jumlah mahasiswa yang akan dimasukkan
+    cout << "Masukkan banyak mahasiswa : ";
+    cin >> n; // Membaca jumlah mahasiswa dari user
+    
+// Loop untuk mengisi data setiap mahasiswa
+    for(int i = 0; i < n; i++) {
+        cout << "Mahasiswa " << i + 1 << endl;
 
-        mahasiswa.push_back(mhs1);
+        cin.get(); // Membersihkan buffer
+        getline(cin, mhs1.nama); //untuk spasi
+
+        cout << "Masukkan umur : "; //input umur
+        cin >> mhs1.umur;
+
+        cout << "Masukkan ipk : "; //input ipk
+        cin >> mhs1.ipk;
+
+        mahasiswa.push_back(mhs1); // Menambahkan objek mhsInput ke dalam vector
+
     }
 
-    for(int i=0;i<n;i++){
-        cout << "Mahasiswa ke-" << i+1 << endl;
-        cout << "Nama : " << mahasiswa[i].nama << endl;
-        cout << "Umur : " << mahasiswa[i].umur << endl;
-        cout << "IPK  : " << mahasiswa[i].ipk << endl;
+    for(int i = 0; i < n; i++){
+        cout << "Mahasiswa " << i + 1 << endl; // Mencetak "Mahasiswa " diikuti nomor urutnya (mulai dari 1) lalu pindah baris
+        cout << "Nama : " << mahasiswa[i].nama << endl; //mencetak nama mahasiswa
+        cout << "Umur : " << mahasiswa[i].umur << endl; //umur
+        cout << "IPK : " << mahasiswa[i].ipk << endl; // ipk
     }
+
 }
