@@ -14,7 +14,7 @@ int main(){
 // data mahasiswa operator (.) karna variabel langsung
     mhs1.nama="nazwa";
     mhs1.umur= 19;
-    mhs1.ipk = 4.00;
+    mhs1.ipk = 4.00; //aamiinn
 
     // cout<< "nama = "  << mhs1.nama<<endl;
     // cout<< "umur = "  << mhs1.umur<<endl;
