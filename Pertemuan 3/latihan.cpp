@@ -1,20 +1,19 @@
-#include <iostream> // header untuk c++
+#include <iostream> // header untuk input/output
+
 using namespace std;
 
 int main() {
-    int angka; // deklarasi variabel
-    system("cls"); //membersihkan layar
-    
-    cout << "Masukkan sebuah bilangan bulat: ";
-    cin >> angka; //inputan bil.bulat dan menyimpan di var.angka
-    
-if (angka % 10 == 0) { //memeriksa apakah angka habis dibagi 10
+    int angka; // deklarasi variabel integer
+    cout << "Masukkan sebuah bilangan bulat: "; // tampilkan input prompt
+    cin >> angka; // baca input dari user
+
+    if (angka % 10 == 0) { // jika angka kelipatan 10
         cout << angka << " adalah kelipatan dari 10." << endl;
-    } else if (angka % 5 == 0) { // Jika kondisi pertama salah, periksa apakah 'angka' habis dibagi 5
-        cout << angka << " adalah kelipatan dari 5." << endl; / Jika ya, tampilkan pesan ini
-    } else { // Jika kedua kondisi di atas salah
-        cout << angka << " bukan kelipatan dari 5 atau 10." << endl; // tampilan
+    } else if (angka % 5 == 0) { // jika angka kelipatan 5
+        cout << angka << " adalah kelipatan dari 5." << endl;
+    } else { // jika bukan kelipatan 5 atau 10
+        cout << angka << " bukan kelipatan dari 5 atau 10." << endl;
     }
 
- return 0;
+    return 0; // keluar dari program
 }
