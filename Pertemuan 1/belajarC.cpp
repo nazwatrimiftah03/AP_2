@@ -1,5 +1,6 @@
 #include <stdio.h> // header untuk C
 #include <conio.h> // header untuk fungsi getch()
+#include <string.h> // diperlukan untuk fungsi strlen (jika trimming newline)
 
 int main() {
     char nama[50]; //deklarasi array karakter untuk nama maks.49 karakter
@@ -10,15 +11,17 @@ int main() {
     printf("Hello World\n"); // fungsi keluaran pada C
 
     printf("Masukkan nama : ");
-    gets(nama); // get string
+    fgets(nama, sizeof(nama), stdin); // get string
+    nama[strcspn(nama, "\n")] = 0; // hapus newline
 
     printf("Masukkan nim : ");
     scanf("%d", &nim); // fungsi masukan pada C
 
-    getchar();
+    getchar(); // membersihkan newline sisa dari scanf
 
     printf("Masukkan kom : ");
-    gets(kom); 
+    fgets(kom, sizeof(kom), stdin); 
+    kom[strcspn(kom, "\n")] = 0; // hapus newline
 
     printf("Masukkan ip : ");
     scanf("%f", &ip); 
@@ -36,3 +39,4 @@ int main() {
     printf("press any button to continue...");
     getch(); //menunggu input karakter sebelum console
 }
+
