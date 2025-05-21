@@ -8,33 +8,33 @@ int main () {
     /* 2 Cara Membuat Array */
 
     // cara 1 : array kosong
-    // string nama[5];
+    // string nama[5]; // deklarasi nama array dengan 5 elemen string
 
-    // nama[0]="Alya";
-    // nama[1]="Parul";
-    // nama[2]="Syukron";
+    // nama[0]="Alya"; // mengisi elemen pertama (indeks 0)
+    // nama[1]="Parul"; // mengisi elemen kedua (indeks 1)
+    // nama[2]="Syukron"; // dan seterusnya dgn berurutan
     // nama[3]="Aurick";
     // nama[4]="Dzakwan";
 
     // cara 2 : array yang langsung diisi
-    // string nama[5] = {"Alya", "Parul", "Syukron", "Aurick", "Dzakwan"};
-    // string nama[] = {"Alya", "Parul", "Syukron", "Aurick", "Dzakwan"};
+    // string nama[5] = {"Alya", "Parul", "Syukron", "Aurick", "Dzakwan"}; // array dengan ukuran ditentukan
+    // string nama[] = {"Alya", "Parul", "Syukron", "Aurick", "Dzakwan"}; // array dgn ukuran otomatis sesuai jumlah elemen
 
     // Ascending Element in Array
-    // cout << nama[0] << endl;
-    // cout << nama[1] << endl;
-    // cout << nama[2] << endl;
-    // cout << nama[3] << endl;
-    // cout << nama[4] << endl;
+    // cout << nama[0] << endl; //mencetak elemen pertama
+    // cout << nama[1] << endl; // mencetak elemen kedua
+    // cout << nama[2] << endl; // mencetak ketiga
+    // cout << nama[3] << endl; //mecetak keempat
+    // cout << nama[4] << endl;// mencetak kelima
 
     // Menggunakan Looping
-    // for(int i = 0; i < 5; i++) {
-    //     cout << nama[i] << endl;
+    // for(int i = 0; i < 5; i++) { //loop dari indeks 0 sampai 4 
+    //     cout << nama[i] << endl; // mencetak elemen indek i
     // }
 
     // Descending element in array use looping
-    // for (int i = 4; i >= 0; i--) {
-    //     cout << nama[i] << endl;
+    // for (int i = 4; i >= 0; i--) { //loop dari indeks 4 mundur sampai 0
+    //     cout << nama[i] << endl; // mencetak elemen pada indeks i
     // }
 
 
@@ -43,15 +43,15 @@ int main () {
     // 1 3 5
     // 2 4 6
 
-    // int matrix[2][3] = {{1, 3, 5},{2, 4, 6}};
-    // for(int i = 0; i < 2; i++) {
-    //     for(int j = 0; j < 3; j++) {
-    //         cout << matrix[i][j] << " ";
+    // int matrix[2][3] = {{1, 3, 5},{2, 4, 6}}; //deklrasi dan inisialisasi array 2x3
+    // for(int i = 0; i < 2; i++) { //loop untuk baris 
+    //     for(int j = 0; j < 3; j++) { // loop untuk kolom
+    //         cout << matrix[i][j] << " "; //mencetak elemen pada baris i dan kolom j
     //     }
     //     cout << endl;
     // }
 
-    // int matrix[4][6] ={
+    // int matrix[4][6] ={ //contoh array 4x6
     //     {1, 2, 3, 4, 5, 6},
     //     {7, 8, 9, 10, 11, 12},
     //     {13, 14, 15, 16, 17, 18},
@@ -68,11 +68,11 @@ int main () {
 
 
     // String (array of characters)
-    // string nama = "Kiel";
-    // cout << nama[0] << endl;
-    // cout << nama[2] << endl;
+    // string nama = "Kiel"; //deklarasi dan inisialisasi string
+    // cout << nama[0] << endl; //mengakses karakter pertama
+    // cout << nama[2] << endl; //mengakses karakter ketiga
 
-    // for (int i = 0; i < nama.length(); i++) {
+    // for (int i = 0; i < nama.length(); i++) { //loop sepanjang string
     //     cout << nama[i] << endl;
     // }
     
@@ -81,19 +81,19 @@ int main () {
     // string s2 = "World"; 
 
     /* 1. s1 = s2 */
-    // s1 = s2;
+    // s1 = s2; //mengganti isi s1 dengan s2
     // cout << "s1 = " << s1 << endl;
 
     /* 2. s1 = s1 + s2 */
     // s1 = "Hello";  // reset nilai di s1
-    // cout << "Hasil : " << s1 + s2 << endl;
+    // cout << "Hasil : " << s1 + s2 << endl; //menggabungkan string
 
     /* 3. s1. length() */
     // cout << s1.length() << endl;
     // cout << (s1 + s2).length() << endl;
 
-    /* 4. s1.substr(n, m) */
-    // cout << s1.substr(2, 3) << endl;
+    /* 4. s1.substr(n, m) */ // Mengambil substring dari indeks 2 sebanyak 3 karakter
+    // cout << s1.substr(2, 3) << endl; // Mengambil substring dari string gabungan 
     // cout << (s1 + s2).substr(5, 3) << endl;
 
 
@@ -109,14 +109,14 @@ int main () {
 
 
     // Array library
-    // array<float, 5> nilai = {87.5, 90, 100, 95.7, 78.3};
+    // array<float, 5> nilai = {87.5, 90, 100, 95.7, 78.3}; // Deklarasi std::array untuk 5 float
     // cout << "Nilai : ";
 
-    // for(int i = 0; i < nilai.size(); i++) {
+    // for(int i = 0; i < nilai.size(); i++) { // Loop menggunakan indeks dan 'size()' untuk ukuran array
     //     cout << nilai[i] << " ";
     // }
 
-    // for (float n : nilai) {
-    //     cout << n << " ";
+    // for (float n : nilai) { // Untuk setiap elemen 'n' dalam array 'nilai'
+    //     cout << n << " "; // Mencetak elemen 'n'
     // }
 }
